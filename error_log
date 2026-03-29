@@ -1,0 +1,252 @@
+[29-Mar-2026 11:26:08 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:08 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:08 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:08 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:08 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:08 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:08 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:08 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:08 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:09 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:09 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:09 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:09 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:09 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:09 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:10 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:10 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:10 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:10 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:10 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:10 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:10 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:10 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:10 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:11 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:11 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:11 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:11 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:11 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:11 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:12 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:12 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:12 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:12 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:12 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:12 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:12 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:12 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:12 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:13 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:13 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:13 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:13 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:13 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:13 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:13 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:13 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:13 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:14 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:14 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:14 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:14 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:14 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:14 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:15 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:15 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:15 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:15 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
+[29-Mar-2026 11:26:15 America/Chicago] PHP Warning:  include(/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php): Failed to open stream: No such file or directory in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:15 America/Chicago] PHP Warning:  include(): Failed opening '/home3/sempaix/animegames.app/vendor/composer/../sebastian/version/src/Version.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home3/sempaix/animegames.app/vendor/composer/ClassLoader.php on line 576
+[29-Mar-2026 11:26:15 America/Chicago] PHP Fatal error:  Uncaught Error: Class "SebastianBergmann\Version" not found in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php:38
+Stack trace:
+#0 /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php(49): PHPUnit\Runner\Version::id()
+#1 /home3/sempaix/animegames.app/vendor/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php(10): PHPUnit\Runner\Version::series()
+#2 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(41): require('/home3/sempaix/...')
+#3 /home3/sempaix/animegames.app/vendor/composer/autoload_real.php(45): {closure}('a1cfe24d14977df...', '/home3/sempaix/...')
+#4 /home3/sempaix/animegames.app/vendor/autoload.php(25): ComposerAutoloaderInitc57754c93ae34ac3b9b716a0fd2f2149::getLoader()
+#5 /home3/sempaix/animegames.app/artisan(10): require('/home3/sempaix/...')
+#6 {main}
+  thrown in /home3/sempaix/animegames.app/vendor/phpunit/phpunit/src/Runner/Version.php on line 38
