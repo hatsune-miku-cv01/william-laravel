@@ -10,7 +10,31 @@
                 </div>
                 <h1 class="font-rajdhani text-3xl font-bold text-white mb-2 tracking-wide">{{ $post->title }}</h1>
                 <p class="font-rajdhani text-xs text-gray-600 tracking-widest mb-8">BY {{ strtoupper($post->user->name) }}</p>
-                <div class="font-rajdhani text-gray-300 leading-relaxed text-base whitespace-pre-wrap border-t border-gray-800 pt-8">{{ $post->body }}</div>
+
+                @php
+                    $body = $post->body;
+                    $youtubeId = null;
+                    if (preg_match('/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $body, $matches)) {
+                        $youtubeId = $matches[1];
+                        $body = preg_replace('/https?:\/\/(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)[^\s]+/', '', $body);
+                    }
+                @endphp
+
+                @if($youtubeId)
+                <div class="mb-8 rounded-lg overflow-hidden" style="border:1px solid rgba(0,255,245,0.2);">
+                    <div style="position:relative; padding-bottom:56.25%; height:0;">
+                        <iframe
+                            src="https://www.youtube.com/embed/{{ $youtubeId }}"
+                            style="position:absolute; top:0; left:0; width:100%; height:100%;"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                @endif
+
+                <div class="font-rajdhani text-gray-300 leading-relaxed text-base whitespace-pre-wrap border-t border-gray-800 pt-8">{{ trim($body) }}</div>
 
                 @auth
                     @if(auth()->id() === $post->user_id)
