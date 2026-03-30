@@ -58,12 +58,16 @@
         .hud-label{font-size:7px;letter-spacing:3px;color:rgba(0,255,245,0.5);margin-bottom:3px;display:block;}
         .hud-msg{font-size:10px;color:#fff;letter-spacing:.5px;}
         .msg-jp{display:block;font-size:9px;color:rgba(0,255,245,0.5);margin-top:1px;}
-        .banner-nav{position:absolute;top:0;right:0;height:100%;display:flex;align-items:center;gap:0;z-index:20;padding-right:16px;}
+        .banner-nav{position:absolute;top:0;right:0;height:100%;display:flex;align-items:center;gap:6px;z-index:20;padding-right:16px;}
         .banner-nav a{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;color:rgba(0,255,245,0.6);text-decoration:none;padding:8px 14px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;text-transform:uppercase;}
         .banner-nav a:hover{color:#00fff5;border-bottom-color:#00fff5;}
-        .banner-nav .nav-btn{background:transparent;border:1px solid #00fff5;color:#00fff5;padding:6px 16px;font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;text-decoration:none;transition:all .2s;margin-left:8px;}
+        .banner-nav .nav-btn{background:transparent;border:1px solid #00fff5;color:#00fff5;padding:6px 16px;font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;text-decoration:none;transition:all .2s;margin-left:4px;}
         .banner-nav .nav-btn:hover{background:#00fff5;color:#020809;}
-        @media(max-width:640px){.miku-hud-bubble{display:none}.miku-name-large{font-size:14px}.banner-nav a:not(.nav-btn){display:none}}
+        .nav-search-input{background:#050f10;border:1px solid rgba(0,255,245,0.3);color:#fff;padding:5px 10px;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:0.1em;border-radius:3px;width:130px;outline:none;}
+        .nav-search-input:focus{border-color:#00fff5;}
+        .nav-search-btn{background:transparent;border:1px solid rgba(0,255,245,0.4);color:#00fff5;padding:5px 10px;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:0.1em;cursor:pointer;border-radius:3px;transition:all .2s;}
+        .nav-search-btn:hover{background:#00fff5;color:#020809;}
+        @media(max-width:640px){.miku-hud-bubble{display:none}.miku-name-large{font-size:14px}.banner-nav a:not(.nav-btn){display:none}.nav-search-input{width:80px}}
     </style>
 </head>
 <body>
@@ -102,9 +106,10 @@
             </div>
         </div>
         <div class="banner-nav">
+            <input class="nav-search-input" id="nav-q" type="text" placeholder="SEARCH..." onkeydown="if(event.key==='Enter'){window.location.href='/searchkit.html?q='+encodeURIComponent(this.value);}">
+            <button class="nav-search-btn" onclick="window.location.href='/searchkit.html?q='+encodeURIComponent(document.getElementById('nav-q').value);">GO</button>
             <a href="/posts">News</a>
             <a href="/reviews">Reviews</a>
-            <a href="#latest">Videos</a>
             @auth
                 <a href="/dashboard" class="nav-btn">Dashboard</a>
             @else
@@ -207,3 +212,5 @@
     </footer>
 </body>
 </html>
+ENDOFFILEphp ~/animegames.app/artisan route:list
+

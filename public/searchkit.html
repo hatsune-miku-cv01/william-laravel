@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SearchKit — Powered by SerpApi</title>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #020809; color: #e0e0e0; font-family: 'Rajdhani', sans-serif; min-height: 100vh; }
+.scanline { background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,245,0.01) 2px, rgba(0,255,245,0.01) 4px); pointer-events: none; position: fixed; inset: 0; z-index: 9999; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #020809; }
+::-webkit-scrollbar-thumb { background: #00fff5; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useCallback } = React;
+const MODES = [
+  { id: "search",  label: "Google",   engine: "google",          resultKey: "organic_results"  },
+  { id: "jobs",    label: "Jobs",     engine: "google_jobs",     resultKey: "jobs_results"     },
+  { id: "news",    label: "News",     engine: "google_news",     resultKey: "news_results"     },
+  { id: "prices",  label: "Shopping", engine: "google_shopping", resultKey: "shopping_results" },
+];
+const S = {
+  app: { maxWidth: 900, margin: "0 auto", padding: "2rem 1rem" },
+  logo: { fontFamily: "'Orbitron',monospace", fontSize: "2.5rem", fontWeight: 900, color: "#00fff5", textShadow: "0 0 20px #00fff5", textAlign: "center", marginBottom: "0.5rem" },
+  sub: { fontFamily: "'Rajdhani',sans-serif", fontSize: 13, letterSpacing: "0.3em", color: "rgba(0,255,245,0.5)", textAlign: "center", marginBottom: "2rem" },
+  box: { background: "#0a1a1c", border: "1px solid rgba(0,255,245,0.3)", borderRadius: 8, padding: "1.5rem", marginBottom: "1.5rem" },
+  modeRow: { display: "flex", gap: 8, marginBottom: "1rem", flexWrap: "wrap" },
+  modeBtn: (a) => ({ fontFamily: "'Orbitron',monospace", fontSize: 10, letterSpacing: "0.15em", padding: "8px 16px", border: `1px solid ${a?"#00fff5":"rgba(0,255,245,0.2)"}`, background: a?"rgba(0,255,245,0.1)":"transparent", color: a?"#00fff5":"#6b7280", cursor: "pointer", borderRadius: 4 }),
+  inputRow: { display: "flex", gap: 10 },
+  input: { flex: 1, background: "#050f10", border: "1px solid rgba(0,255,245,0.3)", borderRadius: 4, padding: "10px 14px", color: "#fff", fontFamily: "'Rajdhani',sans-serif", fontSize: 15, outline: "none" },
+  btn: (l) => ({ fontFamily: "'Orbitron',monospace", fontSize: 10, letterSpacing: "0.15em", padding: "10px 20px", background: l?"rgba(0,255,245,0.1)":"#00fff5", color: l?"#00fff5":"#020809", border: "1px solid #00fff5", borderRadius: 4, cursor: l?"not-allowed":"pointer", whiteSpace: "nowrap" }),
+  resHeader: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" },
+  resTitle: { fontFamily: "'Orbitron',monospace", fontSize: 14, color: "#00fff5", letterSpacing: "0.2em" },
+  resCount: { fontFamily: "'Rajdhani',sans-serif", fontSize: 12, color: "#6b7280", letterSpacing: "0.1em" },
+  card: { background: "#0a1a1c", border: "1px solid rgba(0,255,245,0.15)", borderRadius: 8, padding: "1rem 1.25rem", marginBottom: 10, cursor: "pointer" },
+  cardTitle: { fontFamily: "'Rajdhani',sans-serif", fontSize: 16, fontWeight: 600, color: "#fff", marginBottom: 4 },
+  cardMeta: { fontFamily: "'Rajdhani',sans-serif", fontSize: 12, color: "#6b7280", marginBottom: 4 },
+  cardLink: { fontFamily: "'Rajdhani',sans-serif", fontSize: 11, color: "#00fff5", wordBreak: "break-all" },
+  cardSnip: { fontFamily: "'Rajdhani',sans-serif", fontSize: 13, color: "#9ca3af", marginTop: 6, lineHeight: 1.6 },
+  badge: (c) => ({ display: "inline-block", fontFamily: "'Orbitron',monospace", fontSize: 9, letterSpacing: "0.1em", padding: "2px 8px", borderRadius: 2, background: `rgba(${c},0.1)`, border: `1px solid rgba(${c},0.3)`, color: `rgb(${c})`, marginBottom: 8 }),
+  err: { background: "rgba(248,113,113,0.1)", border: "1px solid rgba(248,113,113,0.3)", borderRadius: 8, padding: "1rem", color: "#f87171", fontFamily: "'Rajdhani',sans-serif", fontSize: 14, marginBottom: 10 },
+  empty: { textAlign: "center", padding: "3rem" },
+  footer: { textAlign: "center", marginTop: "3rem", padding: "1.5rem", borderTop: "1px solid rgba(0,255,245,0.1)" },
+  footerText: { fontFamily: "'Orbitron',monospace", fontSize: 9, letterSpacing: "0.3em", color: "rgba(0,255,245,0.3)" }
+};
+function Card({ r, mode }) {
+  const go = () => { const l = r.link||r.related_pages_link; if(l) window.open(l,"_blank"); };
+  if(mode==="jobs") return (<div style={S.card} onClick={go}><span style={S.badge("0,255,245")}>JOB</span><div style={S.cardTitle}>{r.title||"N/A"}</div><div style={S.cardMeta}>{r.company_name||"N/A"} — {r.location||"N/A"}</div>{r.via&&<div style={S.cardMeta}>via {r.via}</div>}{r.description&&<div style={S.cardSnip}>{r.description.substring(0,150)}...</div>}</div>);
+  if(mode==="news") { const src=typeof r.source==="object"?r.source?.name:r.source; return (<div style={S.card} onClick={go}><span style={S.badge("251,191,36")}>NEWS</span><div style={S.cardTitle}>{r.title||"N/A"}</div><div style={S.cardMeta}>{src||"N/A"} | {r.date||"N/A"}</div>{r.snippet&&<div style={S.cardSnip}>{r.snippet}</div>}</div>); }
+  if(mode==="prices") return (<div style={S.card} onClick={go}><span style={S.badge("167,139,250")}>SHOP</span><div style={S.cardTitle}>{r.title||"N/A"}</div><div style={S.cardMeta}>{r.price||"N/A"} | {r.source||"N/A"}</div>{r.link&&<div style={S.cardLink}>{r.link.substring(0,70)}</div>}</div>);
+  return (<div style={S.card} onClick={go}><span style={S.badge("0,255,245")}>WEB</span><div style={S.cardTitle}>{r.title||"N/A"}</div>{r.link&&<div style={S.cardLink}>{r.link.substring(0,70)}</div>}{r.snippet&&<div style={S.cardSnip}>{r.snippet}</div>}</div>);
+}
+function App() {
+  const [query,setQuery]=useState("");
+  const [mode,setMode]=useState("search");
+  const [results,setResults]=useState([]);
+  const [loading,setLoading]=useState(false);
+  const [error,setError]=useState(null);
+  const [searched,setSearched]=useState(false);
+  const cur=MODES.find(m=>m.id===mode);
+  const search=useCallback(async()=>{
+    if(!query.trim()) return;
+    setLoading(true); setError(null); setSearched(true); setResults([]);
+    try {
+      const params=new URLSearchParams({q:query,engine:cur.engine});
+      const res=await fetch(`/api/search?${params}`);
+      const data=await res.json();
+      if(data.error){setError(`Error: ${data.error}`);setResults([]);}
+      else{setResults((data[cur.resultKey]||[]).slice(0,10));}
+    } catch(e){setError("Network error. Please try again.");setResults([]);}
+    setLoading(false);
+  },[query,mode,cur]);
+  return (
+    <div style={S.app}>
+      <style>{`@keyframes spin{to{transform:rotate(360deg)}} input::placeholder{color:#374151} input:focus{border-color:#00fff5!important;box-shadow:0 0 8px rgba(0,255,245,0.2)}`}</style>
+      <div style={S.logo}>SEARCH_KIT</div>
+      <div style={S.sub}>POWERED BY SERPAPI · PROJECT 9 OF 25</div>
+      <div style={S.box}>
+        <div style={S.modeRow}>{MODES.map(m=><button key={m.id} style={S.modeBtn(mode===m.id)} onClick={()=>{setMode(m.id);setResults([]);setSearched(false);setError(null);}}>{m.label.toUpperCase()}</button>)}</div>
+        <div style={S.inputRow}>
+          <input style={S.input} type="text" placeholder={`Search ${cur.label}...`} value={query} onChange={e=>setQuery(e.target.value)} onKeyDown={e=>e.key==="Enter"&&search()}/>
+          <button style={S.btn(loading)} onClick={search} disabled={loading}>{loading?"SEARCHING...":"SEARCH"}</button>
+        </div>
+      </div>
+      {error&&<div style={S.err}>⚠️ {error}</div>}
+      {searched&&!loading&&results.length>0&&<div style={S.resHeader}><span style={S.resTitle}>RESULTS_{cur.label.toUpperCase()}</span><span style={S.resCount}>{results.length} RESULTS FOUND</span></div>}
+      {loading&&<div style={{textAlign:"center",padding:"3rem",color:"#00fff5",fontFamily:"'Orbitron',monospace",fontSize:12,letterSpacing:"0.2em"}}><div style={{width:28,height:28,border:"2px solid rgba(0,255,245,0.3)",borderTop:"2px solid #00fff5",borderRadius:"50%",animation:"spin 0.7s linear infinite",margin:"0 auto 16px"}}></div>FETCHING DATA...</div>}
+      {!loading&&results.map((r,i)=><Card key={i} r={r} mode={mode}/>)}
+      {!loading&&searched&&results.length===0&&!error&&<div style={S.empty}><div style={{fontSize:40,marginBottom:12}}>🔍</div><div style={{fontFamily:"'Orbitron',monospace",fontSize:12,color:"#374151"}}>NO_RESULTS_FOUND</div></div>}
+      {!searched&&!loading&&<div style={S.empty}><div style={{fontSize:40,marginBottom:12}}>🕷️</div><div style={{fontFamily:"'Orbitron',monospace",fontSize:12,color:"#374151"}}>ENTER A QUERY TO BEGIN</div><div style={{fontFamily:"'Rajdhani',sans-serif",fontSize:13,color:"#4b5563",marginTop:8}}>Try: "PHP Developer Remote" · "Laravel 2026" · "Hatsune Miku figure"</div></div>}
+      <div style={S.footer}><div style={S.footerText}>SEARCHKIT · WILLIAM RIVERA · GITHUB.COM/HATSUNE-MIKU-CV01 · PROJECT 9 OF 25</div></div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

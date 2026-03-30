@@ -1,27 +1,29 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ReviewController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::resource('posts', PostController::class)->middleware(['auth'])->except(['index', 'show']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{post}', [PostController::class, 'show']);
 
-require __DIR__.'/auth.php';
+Route::resource('reviews', ReviewController::class)->middleware(['auth'])->except(['index', 'show']);
+Route::get('/reviews', [ReviewController::class, 'index']);
+Route::get('/reviews/{review}', [ReviewController::class, 'show']);
 
-use App\Http\Controllers\ProfileController;
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::get('/api/search', function() {
+    $q = request('q');
+    $engine = request('engine', 'google');
+    $key = 'abf7a74e163cf60124a3654ebc89008fb607f73740d18759a7047f11c0d01d85';
+    $url = 'https://serpapi.com/search.json?api_key='.$key.'&q='.urlencode($q).'&engine='.$engine.'&num=10&gl=us&hl=en';
+    $ctx = stream_context_create(['http'=>['timeout'=>15]]);
+    $response = @file_get_contents($url, false, $ctx);
+    if(!$response) return response()->json(['error'=>'Failed to fetch']);
+    return response($response)->header('Content-Type','application/json')->header('Access-Control-Allow-Origin','*');
 });
 
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\ReviewController;
-
-Route::resource('posts', PostController::class);
-Route::resource('reviews', ReviewController::class);
+require __DIR__.'/auth.php';
